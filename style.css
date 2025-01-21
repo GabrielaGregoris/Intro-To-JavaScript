@@ -1,0 +1,25 @@
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #739BD0;
+  }
+
+/* Styling for hidden text */
+.hidden {
+    display: none;
+    color: #333;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Styling for hover effect on image */
+#profile-Pic {
+    border-radius: 50%;
+    transition: opacity 0.3s ease-in-out;
+}
