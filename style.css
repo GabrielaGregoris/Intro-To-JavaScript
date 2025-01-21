@@ -10,6 +10,14 @@ h1 {
     color: #739BD0;
   }
 
+  #outputGreeting {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+
 /* Styling for hidden text */
 .hidden {
     display: none;

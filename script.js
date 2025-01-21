@@ -5,13 +5,15 @@ window.onload = function() {
 
 // 2. Display a greeting when the user inputs their name and clicks submit
 function displayGreeting() {
-    let name = document.getElementById("Gabriela").value;
-    if (name.trim() !== "") {
-        document.getElementById("greeting").innerText = `Greetings, ${name}!`;
+    let name = document.getElementById("nameInput").value;  // Get the user's input
+    
+    if (name.trim() !== "") {  // Check if the name isn't empty
+        document.getElementById("outputGreeting").innerText = `Greetings, ${name}!`;  // Display the greeting
     } else {
-        alert("Gabriela!");
+        alert("Please enter your name!");  // Alert if the input is empty
     }
 }
+
 
 // 3. Show hidden text when the "Learn More" button is clicked
 document.getElementById("learnMoreBtn").onclick = function() {
