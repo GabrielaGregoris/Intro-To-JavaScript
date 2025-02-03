@@ -1,33 +1,20 @@
+/* style.css */
+
 /* Basic page styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 20px;
+
+#greeting {
+    font-size: 20px;
 }
 
-h1 {
-    color: #739BD0;
-  }
-
-  #outputGreeting {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 10px;
+#movingElement {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    left: 0;
+    top: 100px;
 }
 
-
-/* Styling for hidden text */
-.hidden {
-    display: none;
-    color: #333;
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-/* Styling for hover effect on image */
-#profile-Pic {
-    border-radius: 50%;
-    transition: opacity 0.3s ease-in-out;
+#changingText {
+    color: black;
 }

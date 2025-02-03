@@ -1,61 +1,48 @@
-// 1. Show an alert message when the page loads
-window.onload = function() {
-    alert("Hello! Welcome to my page.");
+// script.js
+// Personalized Greeting
+function greet() {
+    let name = document.getElementById("nameInput").value;
+    let greeting = "Greetings, " + name;
+    document.getElementById("greeting").textContent = greeting;
+}
+
+// Element Movement
+let movingElement = document.getElementById("movingElement");
+let position = 0;
+let direction = 1;
+
+movingElement.onmouseover = function() {
+    setInterval(moveElement, 30);
 };
 
-// 2. Display a greeting when the user inputs their name and clicks submit
-function displayGreeting() {
-    let name = document.getElementById("nameInput").value;  // Get the user's input
-    
-    if (name.trim() !== "") {  // Check if the name isn't empty
-        document.getElementById("outputGreeting").innerText = `Greetings, ${name}!`;  // Display the greeting
-    } else {
-        alert("Please enter your name!");  // Alert if the input is empty
+function moveElement() {
+    position += direction;
+    movingElement.style.left = position + "px";
+
+    if (position > window.innerWidth - movingElement.offsetWidth || position < 0) {
+        direction *= -1;
     }
 }
 
+// Text Color Change Timer
+let changingText = document.getElementById("changingText");
+let colors = ["red", "green", "blue", "orange", "purple"];
+let currentColorIndex = 0;
 
-// 3. Show hidden text when the "Learn More" button is clicked
-document.getElementById("learnMoreBtn").onclick = function() {
-    let text = document.getElementById("hiddenText");
-    if (text.style.display === "none" || text.classList.contains("hidden")) {
-        text.style.display = "block";
-        text.classList.remove("hidden");
-    } else {
-        text.style.display = "none";
-    }
-};
-
-// 4. Change the profile picture on hover
-let profilePic = document.getElementById("profile-Pic");
-
-profilePic.onmouseover = function() {
-    profilePic.src = "img/profile2.png";  
-};
-
-profilePic.onmouseout = function() {
-    profilePic.src = "img/profile1.jpg";  
-};
-
-
-// Function to generate a random hex color
-function getRandomColor() {
-    let letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
-
-// Function to change the text color
-function changeTextColor() {
-    let textElement = document.getElementById("greeting");  // Target the greeting paragraph
-    textElement.style.color = getRandomColor();  // Apply a random color
-}
-
-// Change color every 30 seconds (30000 milliseconds)
 setInterval(changeTextColor, 30000);
 
-// Initial call to apply a random color immediately
-changeTextColor();
+function changeTextColor() {
+    changingText.style.color = colors[currentColorIndex];
+    currentColorIndex = (currentColorIndex + 1) % colors.length;
+}
+
+// Bonus Interaction
+document.getElementById("greeting").onclick = function() {
+    alert("You clicked the greeting!");
+};
+
+// List of functions used:
+// 1. greet():  Handles the personalized greeting.
+// 2. moveElement(): Animates the moving element.
+// 3. changeTextColor(): Changes the color of the text.
+// 4. setInterval():  Repeatedly calls other functions for animation and timed events.

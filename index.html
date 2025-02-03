@@ -3,37 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intro To JavaScript</title>
+    <title>Intro to JavaScript</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to My Page</h1>
-    </header>
+    <h1>Welcome!</h1>
 
-    <main>
-            <p id="greeting">Enter your name:</p>
-            <input type="text" id="nameInput">
-            <button onclick="displayGreeting()">Submit</button>
-        
-            <p id="outputGreeting"></p> 
-      
-        
+    <label for="nameInput">Enter your name:</label>
+    <input type="text" id="nameInput">
+    <button onclick="greet()">Greet Me</button>
 
-        <br><br>
+    <p id="greeting"></p>
 
-        <button id="learnMoreBtn">Learn More</button>
-        <p id="hiddenText" class="hidden"> Hi, I'm Gabriela Gregoris, I'm the eldest of three sisters. <br><br> I have a deep love for fashion 👗👠👜 and a strong interest in web design 👩🏻‍💻. <br><br>
-        I'm new to learning JavaScript and want to enhance my web development skills and bring my ideas to life online!</p>
+    <div id="movingElement"></div>
 
-        <br><br>
-
-        <img src="img/profile1.jpg" id="profile-Pic"  alt="Profile Picture" width="200">
-    </main>
-
-    <script src="script.js"></script>  <!-- Linking JavaScript file -->
+    <p id="changingText">This text will change color.</p>
 
 </body>
 </html>
-
