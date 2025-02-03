@@ -1,25 +1,28 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intro to JavaScript</title>
+    <title>JavaScript Interaction</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 <body>
-
-    <h1>Welcome!</h1>
-
+    <h1>Intro to JavaScript Page</h1>
+    
+    <!-- Personalized Greeting -->
     <label for="nameInput">Enter your name:</label>
-    <input type="text" id="nameInput">
-    <button onclick="greet()">Greet Me</button>
-
+    <input type="text" id="nameInput" placeholder="Type your name...">
+    <button onclick="showGreeting()">Submit</button>
     <p id="greeting"></p>
-
-    <div id="movingElement"></div>
-
-    <p id="changingText">This text will change color.</p>
-
+    
+    <!-- Moving Box -->
+    <div id="movingBox"></div>
+    <button onclick="moveBox()">Move Box</button>
+    
+    <!-- Changing Text Color -->
+    <p id="colorText">This text will change color every 30 seconds.</p>
+    
 </body>
 </html>
